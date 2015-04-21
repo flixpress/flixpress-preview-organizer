@@ -82,6 +82,15 @@ module.exports = function (grunt) {
       test: {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'qunit']
+      },
+      livereload: {
+        options: {
+          livereload: '<%= connect.server.options.livereload %>'
+        },
+        files: [
+          'local-flixpress/*',
+          'src/*'
+        ]
       }
     },
     copy: {
@@ -105,7 +114,9 @@ module.exports = function (grunt) {
       server: {
         options: {
           hostname: '*',
-          port: 9000
+          port: 9000,
+          livereload: 35728,
+          open: 'http://localhost:9000/local-flixpress/'
         }
       }
     }
