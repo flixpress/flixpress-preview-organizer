@@ -7,9 +7,9 @@
  */
 (function ($) {
   $.fn.flixpressPreviewOrganizer = function () {
-    return this.each(function (i) {
+    return this.each(function () {
       // Do something to each selected element.
-      $(this).html('flixpressPreviewOrganizer' + i);
+      
     });
   };
 }(jQuery));
