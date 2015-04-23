@@ -15,11 +15,11 @@
       var $recentItems = $items.slice(0, numRecentItems);
       var $pastItems = $items.slice(numRecentItems);
 
-      $recentItems.wrapAll( '<div class="recentOrders"></div>' );
-      $pastItems.wrapAll( '<div class="pastOrders"></div>' );
+      $recentItems.wrapAll( '<div class="recent-orders"></div>' );
+      $pastItems.wrapAll( '<div class="past-orders"></div>' );
 
-      var $recentOrders = $module.find('.recentOrders');
-      var $pastOrders = $module.find('.pastOrders');
+      var $recentOrders = $module.find('.recent-orders');
+      var $pastOrders = $module.find('.past-orders');
 
       $recentOrders.prepend('<h2>Recent Previews</h2>');
       $pastOrders.prepend('<h2>Past Previews Grouped By Template</h2>');
