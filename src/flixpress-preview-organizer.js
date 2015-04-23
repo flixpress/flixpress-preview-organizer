@@ -22,7 +22,7 @@
       var $pastOrders = $module.find('.pastOrders');
 
       $recentOrders.prepend('<h2>Recent Previews</h2>');
-      $pastOrders.prepend('<h2>Past Previews by Template</h2>');
+      $pastOrders.prepend('<h2>Past Previews Grouped By Template</h2>');
 
       // Get rid of pagination display
       $module.find('.RadDataPager').remove();
