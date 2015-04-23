@@ -1,0 +1,50 @@
+﻿
+/**************************************************
+ *                                                *
+ * Default PayPal Buy Now                         *
+ *                                                *
+ **************************************************/
+
+.ErrorMessageLabel
+{
+    color: Red;
+    background-color:Transparent;
+    font-family: Tahoma, Arial, Helvetica;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.OptionTextBox
+{
+}
+
+.OptionDropDownList
+{
+}
+
+.AmountInput
+{
+    font-family: Tahoma, Arial, Helvetica;
+    font-size: 12px;
+    width:60px;
+}
+
+.DiscountInput
+{
+    font-family: Tahoma, Arial, Helvetica;
+    font-size: 12px;
+    width:60px;
+}
+
+.DiscountButton
+{
+    font-family: Tahoma, Arial, Helvetica;
+    font-size: 12px;
+}
+
+.DiscountMessage
+{
+    font-family: Tahoma, Arial, Helvetica;
+    font-size: 12px;
+    color:Red;
+}

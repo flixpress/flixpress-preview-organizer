@@ -1,0 +1,32 @@
+
+/* SEO Mega Menu */
+.seomega *{ margin:0px auto; padding:0px; list-style:none; font-family: Tahoma, sans-serif;}
+.seomega { position:relative; font-size:12px; height:45px; z-index:903;}
+.seomega ul li{ float:left;line-height:45px;position: relative; z-index:100;}
+.seomega ul li ul{ background:#222;display:none; position:absolute; left:0px; width:420px;border-top:none; padding:10px 0 30px; border:1px #ddd solid;border-top:none; font-size:12px;}
+.seomega ul li ul li{ width:48%; line-height:28px; border:0px #000 solid;text-transform:none;}
+.seomega ul li ul li ul{ display: block; position: static; width:auto; border:0px #ccc solid; padding:0px;margin-left:30px; color:#777;}
+.seomega ul li ul li ul li{ float:left;clear:both; padding-left:15px; width:auto}
+.seomega ul li ul li ul li ul li{ float: none;  font-style:italic; width:auto;}
+.seomega .clear{ clear:both}
+.seomega ul .parent{ font-weight:normal;}
+.seomega ul li a{ color:#eee; padding:0 17px; display:block; font-weight:normal; background:transparent; text-decoration:none; outline:none ; }
+.seomega ul li a:hover{ color:#000; padding:0 17px; display:block;}
+.seomega ul li ul li a{ color:#fff; margin:5px 0 0 15px; padding:0px; display:block; border:1px #666 solid; background:#1c1c1c}
+.seomega ul li ul li a:hover{ color:#fff; padding:0px;}
+.seomega ul li ul li ul li a{ padding:0 0 0 15px; display:block;font-weight:normal; margin:0px; border:none; width:180px}
+.seomega ul li ul li ul li ul li a{width:165px;}
+.seomega ul li ul li ul li a:hover{ color:#fff; padding:0 0 0 15px;background:url(li.gif) left center no-repeat; margin:0px;}
+.seomega .downarrowclass { position:absolute;top:19px;right:4px; z-index:100; display:block; width:10px; height:10px; background:url(images/down.gif) center center no-repeat;}
+.seomega ul li:hover a{ background:#333;color:#fff}
+.seomega ul li.current a{ background:#eee;color:#000;}
+.seomega ul li:hover ul li a,.seomega ul li.current ul li a{ background:#333; color:#fff}
+.seomega ul li:hover ul li ul li a,.seomega ul li.current ul li ul li a{ background:url(images/li.gif) left top no-repeat; color:#f7e4e4}
+.seomega ul li:hover ul li ul li a:hover,.seomega ul li.current ul li ul li a:hover{ color:#fff; background-color:#444;width:130px;}
+.seomega ul li .icon{ display:block; float:left; padding:9px 5px 0 0px; width:16px}
+.seomega ul li ul li .icon{ display:block; float:left; padding:2px 10px 0px 3px; width:auto}
+
+
+.seomega #rootadmin .icon,.seomega #roothost .icon{ float:left; margin:5px 3px 5px 0px;}
+.seomega #rootadmin li,.seomega #roothost li{ border:none; padding:0px; margin:0px; line-height:30px; font-size:0.9em}
+.seomega #rootadmin li a,.seomega #roothost li a{ border-bottom:1px #333 solid; line-height:26px}

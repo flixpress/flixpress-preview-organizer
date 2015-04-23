@@ -1,0 +1,585 @@
+@import "css/donStyles.css";
+@import "colorbox.css";
+
+Body								{ margin:0px;padding:0px; background:#fff;}
+Body, .Normal, .NormalTextBox, td, p, .Normal, .NormalDisabled, .NormalBold{ font-family: Arial, Helvetica, sans-serif;line-height:1.4em; color:#555; font-size:12px}
+p									{ padding:5px 0;margin:0px}
+li,ul li							{ list-style:disc }
+ol li								{ list-style:decimal}
+.Head								{ color:#003366;font:bold 1.2em Arial, Helvetica, sans-serif}
+.SubHead							{ color:#666}
+A.CommandButton:link,A.CommandButton:visited,
+A.CommandButton:active				{ font:bold small Arial, Helvetica, sans-serif;color:#003366}
+A.CommandButton:hover				{ color:#4e4efb}
+h1,h2,h3,h4,h5,h6					{ font-weight:bold;line-height:1em; margin:0px; padding:5px 0;}
+a:link,a:active,a:visited			{ border:0;text-decoration:underline;outline:none; color:#666666;}
+a:hover 							{ color:#777777;text-decoration:none}
+
+@font-face
+{
+font-family: Swiss721;
+src: url(/fonts/8655.ttf);
+}
+
+@font-face
+{
+font-family: Swiss721n;
+src: url(/fonts/Swnm.ttf);
+}
+
+#first-impression {margin-top: 20px;}
+.rtLI:hover {cursor:pointer !important;}
+#prvPlayer {position:absolute; border: 4px solid #fff;z-index:1000;margin-top:-240px;margin-left:-150px;}
+#prvPlayer_wrapper {position:absolute !important;z-index:1000 !important;}
+.redRound {background-color:#fff; color:#222 !important;border-radius:5px; padding:5px 10px; display:inline-block; font-size:18px;text-decoration:none !important;}
+.redRound:hover {background:#a40000;color:#fff !important;}
+
+/*Sample videos Vtabs */
+.smplTitle {text-align:left; padding-left:10px; color:#fff; border-bottom:2px solid #555;font-size:24px;margin-bottom:10px;}
+.vidCont {float:left;width:400px;}
+#smplVid {border: 1px solid #555; margin-top:15px;margin-left:15px; box-shadow:10px 10px 10px #111;}
+#smplVid_jwPlayerOverlay {margin-left:15px !important; margin-top:15px !important;width:447px !important;height:175px;}
+#smplVid_wrapper {margin-left:5px;}
+
+ .smplCont {float: left;
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+  width: 265px;
+  margin-top:-2px;
+  margin-left:-15px;
+  height:293px;
+  font-size:16px;
+  box-shadow:5px 5px 10px #111;
+  background-color:#333;
+  
+  }
+  
+  .smplCont p {color:#ddd;display:block; }
+
+.ui-tabs-vertical {
+  background:url('/images/hive_inverted.png');
+  padding-right:2px;
+  float:left;
+  height:auto;
+  padding-bottom:46px;
+  padding-top:50px;
+  box-shadow:0 0 50px #000 inset;
+  width: 988px;
+
+   }
+.ui-tabs-vertical .ui-tabs-nav {
+  padding: 10px 0 20px 10px !important;
+  float:left;
+  background:none !important;
+  width: 160px;
+  box-shadow:none !important;
+  
+  }
+.ui-tabs-vertical .ui-tabs-nav li {
+  border:1px solid #aaa !important;
+  font-size:12px;
+  padding:0px !important;
+  background-color:#333 !important;
+  line-height:30px !important;
+  list-style:none;
+  clear: left;
+  width: 100%;
+  border-bottom-width: 1px !important;
+  border-right-width: 1px !important;
+  margin: 0 -1px 1px 0 !important; 
+  border-radius:5px;}
+  
+ .ui-tabs-vertical .ui-tabs-nav li:hover {background-color:#555 !important;}
+  
+.ui-tabs-vertical .ui-tabs-nav li a {
+  display: block; text-decoration:none;color:#fff;}
+  
+.ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active {
+  background-color:#eee !important;
+  padding-bottom: 0;
+  
+  border-right-width: 1px;
+  border-right-width: 1px; 
+  
+  }
+  .ui-tabs-vertical .ui-tabs-nav li.ui-tabs-active a{color:#222;}
+.ui-tabs-vertical .ui-tabs-panel {
+  padding: 1em;
+  float: right;
+  width: 780px; 
+
+  }
+
+  
+
+.vtabs-helper:before,
+.vtabs-helper:after {
+  content: "";
+  display: table;
+  border-collapse: collapse; }
+
+.vtabs-helper:after {
+  clear: both; }
+
+
+
+.vtabs-helper {
+  min-height: 0;
+  /* support: IE7 */ }
+
+
+/*Flixpress Front Page - Style */
+
+
+
+.content-block {background:url('images/trans_back1.png'); box-shadow: 0 0 20px #aaa;}
+
+#fpBlock li {
+  list-style: none;
+  display: inline;
+  margin-left:0.6em;
+  margin-right:0.6em; }
+
+
+#picBoxIn {position:relative; width:196px; height: 187px;background:url('/images/filmstrip.jpg'); background-repeat:repeat-y;margin-top:-187px;margin-left:385px;}
+#picBox {width: 984px; height: 187px;background-image: url('/images/background_bw1.jpg');background-repeat:repeat;border:1px solid #555;margin-top:20px;}
+
+.inlineHeader {margin-top:25px; color:#fff;display:block;padding:12px 15px 12px 20px;  font-size:16px !important;font-family:Arial; text-transform:uppercase;margin-left:15px; background-color:#000;font-weight:bold;border:1px solid #888;border-bottom:1px solid #888;}
+
+.featDiv { text-align:justify; text-justify:inter-word;font-family:Arial, Helvetica, sans-serif;  color:#222; padding:15px 25px 20px 15px;height:80px;font-size:13px; line-height:17px;margin-left:15px; box-shadow: 0 0 10px #999;border-top:none; background-color:#fff;}
+
+/*Flixpress Front Page - rollover features */
+
+
+
+.buttonInfo {
+  float:right;
+  display: block;
+  color: #222 !important;
+  
+  text-align: center;
+  padding: 5px 15px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size:12px;
+  margin-top:-30px;
+  font-weight:bold;
+
+  }	
+
+  .buttonInfo:hover {
+	
+    
+	
+  }
+
+
+/*Flixpress Front Page - rollover features - end*/
+
+
+/* * * * * * Flixpress Footer * * * * * */
+
+#dnnfooterbox { background:#111; padding:20px 0;}
+
+/* Targeted changes that do not affect the rest of the site */
+#dnnfooterbox .group {	margin-bottom: 30px; margin-top: 20px;}
+#dnnfooterbox .group:last-of-type { margin-bottom: 20px;}
+#dnnfooterbox .four > h3 { text-align:left;}
+/**/
+
+#dnnfooterbox .section ul { margin: 0;}
+#dnnfooterbox .section ul li { list-style: none;}
+
+#dnnfooterbox .ftHead {
+	background-color:#333;
+	color:#eee;
+	text-align:center;
+	padding:10px 10px;
+	font-size:22px;
+}
+#dnnfooterbox .section {
+	height:157px;
+	z-index: 1;
+	padding-top: 53px;
+}
+#dnnfooterbox .section .ftHead {
+	position: absolute;
+		top:0; left:0; right:0;
+}
+#dnnfooterbox .section a {
+	color: #ccc;
+	text-decoration: none;
+	display: block; 
+	padding: 5px;
+	z-index: 1; 
+	margin-bottom: 8px;
+}
+#dnnfooterbox .section a:hover {background-color: #444}
+#dnnfooterbox .section a.no-highlight:hover { background-color: transparent; }
+
+/* Highlights the containing [div] of the link. Replaces the old css rules
+ * that made the [div] highlight when it was hovered. This method only
+ * highlights when a link is covered, so that there isn't feedback on an
+ * action that produces no change in the event on click
+ */ 
+#dnnfooterbox .section a::before {
+	content:'';
+	position: absolute;
+	top:0;bottom:0;left:0;right: 0;
+	background-color: #222; 
+	z-index: -1;
+	display: none;
+}
+#dnnfooterbox .section a:hover::before {display: block;}
+
+#dnnfooterbox .section h4 {
+	font-size: 20px;
+	color: #eee;
+}
+#dnnfooterbox .section a img {
+	float: left;
+	margin-right: 15px;
+}
+#dnnfooterbox .section a.icon img {
+	margin-right: 0;
+	float: none;
+}
+#dnnfooterbox p { 
+	padding: 0 0 5px; 
+	text-align: justify;
+	color: #ccc;
+}
+#dnnfooterbox .section li a {
+	margin: 0;
+	padding-top:3px;
+	padding-bottom: 2px;
+}
+#dnnfooterbox .section a.icon {
+	display: inline-block;
+}
+
+/* * * * * * END Flixpress Footer * * * * * */
+
+
+
+#register-block1 { padding:25px 0; text-align:center;  position:relative; z-index:500; background:#222;font-family:Arial; color: #ccc;font-size:18px;}
+#register-block1:hover{background-color:#fff;color:#222;}
+#register-block1 span{color:#fff;padding:0 5px; text-decoration:underline;}
+#register-block1:hover span {color:#a40000;}
+
+
+#register-block { padding:30px 0; text-align:center;  position:relative; z-index:500; font-family:Arial; color: #fff; font-size:16px; background-color:#000;}
+#register-block:hover{background-color:#000;color:#fff;border-color:#fff;border-color:#fcc000;}
+#register-block span{color:#fff;padding:0 5px; font-weight:bold;}
+#register-block:hover span {color:#fcc000;}
+
+
+#proFeat {float: left; width: 320px; height:260px; margin: 15px 0px 0px 40px; padding:0 30px 0 20px; line-height:18px; color:#222;}
+#proFeat h1 {display:block;margin-left:-15px;-15px;padding:10px 0 5px 15px;margin-bottom:15px; font-size:28px !important; width:350px;border-bottom:2px solid #555;}
+#proFeat ul li {margin-top:2px;}
+
+
+#customVid1, #customVid2, #customVid3 {border:1px solid #555;}
+
+.contCT {width: auto; height: 290px;padding:40px 0 40px 50px;border-bottom:1px solid #555;border:1px solid #555;border-top:none;background:url('/images/trans_back.png');box-shadow:0 0 100px #bbb inset;}
+.contPro {width: auto; height: 260px;padding:15px 0 50px 10px;border-bottom:1px solid #555;border:1px solid #555;background:url('/images/trans_back.png');box-shadow:0 0 100px #bbb inset;}
+#contTop { width:auto; height:290px; padding:30px 0px 50px 50px;position: relative;z-index:400; }
+#contTop1 { width:auto; height:290px; padding:50px 0px 50px 45px;position: relative;z-index:400;background:url('/images/hive_inverted.png');box-shadow:0 0 100px #bbb inset;}
+
+
+#customWrap { width:auto; height:290px; padding:50px 0px 50px 25px;position: relative;z-index:400;background:url('/images/hive_inverted.png');box-shadow:0 0 50px #000 inset }
+#customText {float:left; width:350px; margin-right:40px;height:250px;  box-shadow:5px 5px 10px #111;   background-color:#444; padding:15px; padding-right:25px;}
+#customText p {color:#eee;}
+#customText h2 {font-size:24px; display:block;border-bottom:2px solid #555; margin-bottom:10px;}
+
+
+#customVid_wrapper {float:left}
+#customVid { float:left !important;border:1px solid #555; box-shadow:5px 5px 20px #000; }
+#videoPlayerMain { float:left !important;border:1px solid #aaa; }
+#gettingStartedVideo {border:1px solid #555;}
+#videoPlayerMain_wrapper { float:left !important;margin-top:15px; }
+#videoPlayerCustomer{}
+#trialWrapper {float:left; height:280px; width:370px; margin-left:65px; color: #fff !important;}
+
+
+
+.fpHead {background:#fff; width:100%; text-align:center;padding:25px 0px 5px 0px; color:#000 ;font-size:22px !important;margin-top:-12px;border:1px solid #555;border-top:none;margin-left:-1px;}
+
+.fpHeadMA {background:#fff; width:100%; text-align:center;padding:20px 8px 0px 0px; color:#000 ;font-size:20px !important;margin-top:-12px;border:1px solid #555;border-top:none;margin-left:-1px; }
+
+.fpHeadSub {width:100%; background-color:#555;text-align:center;font-size:15px !important;padding:9px 0; color:#fff;}
+
+.fpHeadSubMA {width:100%; background-color:#222;text-align:center;font-size:13px !important;padding:7px 4px; color:#fff; margin-bottom:20px}
+
+
+.trialWrapper1 {line-height:15px;font-size:12px; padding-top:0; color:#555; text-align:justify;font-weight:bold;width:330px;float:left;height:240px;margin-left:50px;}
+.trialWrapper1 p{color:#000 !important; font-size:13px;line-height:16px;}
+#titleShared {width:330px; height:40px;padding:5px;margin-bottom:5px; border-bottom:2px solid #555;}
+#titleShared  h3{color:#222; font-size:28px !important;margin-top:3px !important;}
+#fheadLinks li {list-style:none; float:left;text-align:center;line-height:20px;padding:0 20px;font-size:12px;}
+#fheadLinks {text-align:center;height:20px;text-align:center;padding:3px 0 3px 180px;font-weight:bold;}
+#fheadLinks li a{color:eee;}
+
+#trialWrapper h3 {color:#222 ;font-size:22px !important;margin:5px 0px 0px 15px;padding:5px 0 0px 0;text-align:center;display:inline-block;border-bottom:2px solid #555;}
+#trialWrapper .trialChoice p {line-height:15px;font-size:12px; padding:7px 25px 0px 170px; color:#ccc; text-align:justify;font-weight:bold;}
+
+.template-choose{width:150px;height:85px; border: 1px solid #555;float:left;}
+
+#trialWrapper .trialChoice h2.title {
+      color: #fff;
+	  text-transform:uppercase;
+      font-size: 16px;
+      
+      background-color: transparent;
+      padding: 12px 0px 0px 0px;
+      margin-left:17px;
+	  
+	  
+	  display:inline-block;
+	  	}
+	  
+
+  .trialChoice {
+    display: block;
+    height:87px;
+    background:#000;
+    border:1px solid #555;
+    cursor: pointer;
+	margin-top:13px;
+	padding:12px;
+
+	 }
+	  
+.trialChoice:hover {
+	 box-shadow:5px 5px 5px #555;	
+     background:#555;
+     border:1px solid #000;	 
+       }
+
+	   	 
+	   
+.trialChoice .template-choose {
+      float: left;
+      
+      margin-right: 15px; }
+
+
+/*Flixpress Front Page - Price Table */
+
+#videoPlayer_wrapper {float:left !important; }
+#videoPlayer {float:left !important;box-shadow:5px 5px 15px #fff;}
+#descWrap {float:left; width:400px; height:auto;}
+#b, #b:hover {background:url('/images/trans_back.png') !important;}
+.priceTitle {width:100%; text-align:center;background-color:#111;padding:10px 0px 10px 0px; color:#eee;}
+#nosearch {cursor:default;}
+#tdTitle {text-align:left; width:340px;margin-left:45px; padding-left:15px; color:#aa0000; border-bottom:2px solid #555;}
+
+
+
+#tdContentBox {padding:10px 0px 0px 55px !important; height:230px;}
+#tdContent {text-align:left; float:left; width:330px; height: 160px; margin-left:45px; padding:5px 10px;  font-weight:normal;color:#000 !important;font-weight:bold;}
+#videoPlayer {}
+.contentHide {display:none;}
+.hiddenRow {display:none;}
+.displayTd {height:200px; }
+.infoContentDiv {width:380px; height:850px; float:left; padding-right:4px;}
+.priceTableDiv {width:auto;}
+
+.priceTdTh {
+    text-align: center;
+	
+	color:#000;
+	cursor:pointer;
+	background-color:transparent;
+	 }
+	 
+.priceTdThBlank {
+	background-color:transparent;
+	 }
+	 
+.priceTdThSel {
+    text-align: left;
+	
+	color:#000;
+
+	background-color:#fff;
+	 }
+	 
+.priceTdTh:hover {
+	background:#fff;
+	 }
+
+#prices {
+  border-collapse: collapse;
+  width:100%;
+  
+   }
+
+
+
+   
+  #prices thead th {
+    width: 5%;
+	font-size:12px; 
+	background: #222;
+	color:#eee;
+	height:35px;
+	border:none;
+
+	}
+    #prices thead th:first-of-type {
+      width: 10%;  
+	   }
+  #prices tbody th {
+    text-align: left;
+	font-size: 14px;
+	color:#000;
+	cursor:pointer;
+	padding-left:60px;
+	font-family:Arial;
+	text-transform:none;
+	font-weight:bold;
+	background:url('/images/trans_back.png');
+
+	 }
+
+  #prices tr:nth-child(odd)	{  }
+	 
+	 
+  #prices th, #prices td {
+    padding: 10px 15px;
+	font-weight:bold;
+	border-bottom:1px dashed #ccc;
+	 }
+	 
+  #prices td {
+	padding:15px 5px;
+    text-align: center;
+    height: auto;
+    vertical-align: middle; 
+	color:#000;
+	background:url('/images/trans_back.png');
+	}
+#prices tr:hover {background-color:#fff; cursor:pointer;}
+
+  #prices .how-to-purchase td, #prices .how-to-purchase th,#prices .how-to-purchase td:hover ,.how-to-purchase:hover{
+    padding-top:15px;
+	vertical-align: top;
+	color: #000;
+    text-align: left;
+	border: none;
+	cursor:default;
+	text-decoration: none !important; 
+	background-color: transparent !important;
+	 }
+#prices .how-to-purchase td {font-weight:normal; font-size:12px; text-decoration: none !important; color: #111;}	 
+	 
+  #prices .button {
+    width: 75%; }
+	
+.buttonGrid {
+  width:90%;
+  display: inline-block;
+  background-color: #222;
+  color: #fff !important;
+  text-decoration: none !important;
+  text-align: center;
+  padding: 8px;
+  margin: 3px auto;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background-clip: padding-box;
+  
+  /* stops bg color from leaking outside the border: */ }
+  .buttonGrid:hover {
+    background-color: #a40000;
+    color: #fff; }
+	
+
+
+/*Flixpress Browser*/
+.browserItem {float:left; width:152px; padding:12px; text-align:center;margin:7px 8px;margin-bottom:15px; background:#fff; box-shadow: 0px 0px 5px #ccc; }
+.browserItem:hover {background:#fff;box-shadow: 4px 4px 15px #aaa;}
+.browserItemBdr {border:1px solid #ddd;}
+.browserItem:hover .browserItemBdr {box-shadow:none; }
+.browserInnerItem {background-color:#222; width:100%;height:auto; padding:5px 0px 5px 0px;}
+.browserInnerTitle { font-size: 12px; color:#fff; font-weight:bold;}
+.browserSubTitleDiv {margin-top:0px; width:100%; padding:4px 0px 2px 0px; background-color:#fff;color:#222; font-weight: bold; font-size: 11px; font-family: Arial, sans serif;border-top:1px solid #555;}
+
+.browserImg {width:150px;height:85px;}
+
+
+/*Skin Layout Design*/
+
+#DNN6{position:relative;z-index:1;}
+#Body{ background:#1c1c1c; }
+.skinwidth{ width:1024px; margin-left:auto; margin-right:auto;}
+.clr{ clear:both;}
+.fleft{ float:left}
+.fright{ float:right}
+.w49{ width:49%; padding:10px 0}
+.mr10{ margin-right:10px}
+.w40{ width:39%}
+.w60{ width:59%}
+#dnntopbox{ height:30px; color:#ccc; line-height:30px;}
+#dnntopbox a{ color:#ccc; padding:0 5px}
+#dnntopbox a:hover{ color:#f5f5f5}
+#dnnheaderbox{background: #000;  padding: 0; height:102px;}
+#dnnmenubox{ background:#000;}
+#dnnbreaderbox{ background:url(images/breader.gif) left bottom repeat-x; height:35px; line-height:35px}
+#dnncontentbox{ background:#9bbbd2 url('images/back-hive.png') center fixed; }
+#Copyright{ border-top:2px #333 solid; padding:10px 0}
+#Copyright .fright{ padding-left:10px}
+.RedDiv {margin-left: 100px; border: 1px solid #666666; background-color: #000000; color:#fff;padding: 4px; float: left;}
+.RedDiv:hover { background-color: #990200; border:solid 1px #000;}
+
+#dnn_FAPane,#dnn_FBPane,#dnn_FCPane{width:24%; margin-right:1%}
+#dnn_FDPane{ width:24%}
+#dnn_HeaderPane{ padding-top:8px;}
+#dnn_HeaderPane .DnnModule{ margin:0px; padding:0px}
+
+#dnn_LeftPane{float:left;width:240px; margin-right:20px; display:inline}
+#dnn_MiddlePane{float:left;width:460px}
+#dnn_RightPane{float:right;width:240px;}
+#dnn_LeftThreePane{float:left;width:400px}
+#dnn_RightSevenPane{float:right;width:560px;}
+#dnn_LeftSevenPane{float:left;width:720px}
+#dnn_CenterSevenPane{float:left;width:500px}
+#dnn_LeftBrowsePane{float:left;width:280px}
+#dnn_RightThreePane{float:right;width:240px;}
+#dnn_SocialMediaPane{ margin:0px; padding:0px}
+#dnn_BoxaPane{float:left;width:300px;background-color:#eeeeee; padding: 5px 5px 5px 10px;  margin-top:-10px; border: 1px solid #ccc;background: url('/images/trans_back.png') ;}
+#dnn_BoxbPane{float:left;width:300px; margin-left:15px; display:inline ; padding: 5px 5px 5px 10px; margin-top:-10px;  border: 1px solid #ccc;background: url('/images/trans_back.png') ;}
+#dnn_BoxcPane{float:right;width:300px ; ; padding: 5px 5px 5px 10px;  margin-top:-10px;  border: 1px solid #ccc;background: url('/images/trans_back.png') ;}
+#dnn_PageFlipPane {RIGHT: 0px; FLOAT: right; POSITION: absolute; TOP: 0px; z-index:5000; width:60px; height:60px }
+.DNNEmptyPane							{ width:0px;padding:0px;margin:0px}
+
+/* Skin Object Style*/
+#dnnmenubox .SearchContainer{width:200px;height:30px;background:#fff; margin-top:4px; float:right}
+#dnnmenubox .SearchContainer .SearchBorder{border:0;background:none; width:168px; height:30px; margin:0px; padding:0px}
+#dnnmenubox .SearchContainer .SearchIcon{float:left;width:30px;padding:3px;background-position:9px 6px;}
+#dnnmenubox .SearchContainer .SearchIcon img{ width:7px; margin-top:10px}
+#dnnmenubox .SearchContainer .SearchTextBox{float:left;background:#fff;width:130px;margin:5px 0;color:#666;}
+#dnnmenubox .SearchContainer .SearchButton{float:left;text-indent:-9999px;display:block;height:30px;width:30px;padding:0; background:url(images/search.gif) 0 0 no-repeat}
+#dnnmenubox .SearchContainer a.SearchButton:hover{ background:url(images/search.gif) -30px 0 no-repeat}
+
+.CurrentDate{ float:left}
+.Login{ color:#ccc !important;}
+.User { color:#ccc !important;}
+/* Language Object */
+.language-object { display:inline-block; padding:8px; float:left}
+.language-object img{ width:18px}
+
+
+
+
+
+
+
+
+
+
+
+
+

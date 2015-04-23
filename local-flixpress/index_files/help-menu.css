@@ -1,0 +1,130 @@
+#colorbox{
+  overflow: visible;
+  outline: none;
+}
+
+#help-button {
+  position: absolute;
+  color: white;
+  top: -50px;
+  height: 1em;
+  font-size: 1.5em;
+  background: #222;
+  border: 2px solid #777;
+  display: block;
+  margin: 8px;
+  height: auto;
+  padding: 8px;
+  width: 7em;
+  text-align: center;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+#help-button:hover {
+  background: #444;
+  border-color: #000;
+}
+
+#help-button.active,
+#help-button.active:hover {
+  background: grey;
+  color: white;
+  border-color: #000;
+}
+
+#help-screen,
+#help-screen *,
+#help-button {
+  box-sizing: border-box;
+}
+
+#help-screen {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 8px;
+  z-index: 10000;
+}
+
+#help-screen.active {
+  display: block;
+}
+
+#help-screen .content {
+  background: white;
+  border-radius: 3px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+#help-menu {
+  background: grey;
+  margin: 0;
+  color: white;
+  width: 33%;
+  height: 100%;
+  font-size: 18px;
+  float: left;
+  overflow-y: auto;
+}
+
+#help-menu li {
+  list-style: none;
+}
+
+#help-menu li.section {
+  display: block;
+  padding: 8px;
+  color: #000;
+  border-bottom: 1px solid #000;
+  margin-top: 18px;
+}
+
+#help-menu li a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 8px 8px 8px 24px;
+  cursor: pointer;
+}
+
+#help-menu li a:hover {
+  background: #ccc;
+  color: grey;
+}
+
+#help-menu li a.active,
+#help-menu li a.active:hover {
+  background: white;
+  color: black;
+}
+
+#help-info {
+  position: relative;
+  display: block;
+  width: 67%;
+  float: left;
+  height: 100%;
+}
+
+/* Using positioning to hide/show allows
+   jwplayer to keep the video loaded
+   so it doesn't have to make more requests */
+   
+#help-info .info-pane-item {
+  display: block;
+  position: absolute;
+  left: -99999px;
+  padding: 8px;
+  float: left;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#help-info .info-pane-item.active {
+  left: 0;
+}

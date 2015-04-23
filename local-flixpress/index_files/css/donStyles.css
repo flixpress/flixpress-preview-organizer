@@ -1,0 +1,347 @@
+/*
+div.logo { background: url("logo.png") no-repeat; @include image-2x("logo2x.png", 100px, 25px); }
+*/
+/* Admin */
+div.form { width: 500px; text-align: left; }
+
+div.form_group { text-align: left; margin-bottom: 10px; font-size: 14px; }
+
+div.form_text { float: left; margin: 0; }
+
+p.form_text { margin: 0 0 3px 0; }
+
+textarea.form_text, input.form_text, select.form_text { color: #333; background: #efefef; border-color: #bbb #bbb #ddd; border-width: 2px 1px 1px; padding: 0.2em; margin: 0 10px 10px 0; }
+
+input, select, .SkinObject label { color: #666; }
+
+.NormalTextBox { color: #666; padding-left: 4px; line-height: 12px; font-weight: normal; }
+
+td.NormalTextBox { padding: 0px; margin: 0px; background: transparent; visibility: inherit; border: 0; }
+
+.DataGrid_Container { margin-top: 15px; }
+
+.DataGrid_Header, .DataGrid_Header td, .NormalBold td { font-weight: bold; }
+
+div.FileManager { height: auto; border: none; }
+
+table.FileManager { width: 99%; text-align: left; background: #FFF; }
+
+.Settings, .Settings, .WorkPanel, .ExtensionsContent td, .DNN_HTMLContent, #dnn_ctr322_ModuleDefinitions_divInstalled { text-align: left; }
+
+#dnn_ctr_Login_pnlLogin table { float: none; margin: 0 auto; }
+
+#dnn_ctr_ManageUsers_pnlUser { text-align: left; min-height: 1px; }
+
+#dnn_ctr_ManageUsers_pnlUser .Normal, #dnn_ctr_Terms_lblTerms, #dnn_ctr_Privacy_lblPrivacy { line-height: 20px; }
+
+#dnn_ctr_Terms_lblTerms .SubHead, #dnn_ctr_Privacy_lblPrivacy .SubHead { font-size: 16px; color: #444; line-height: 26px; margin: 0px; padding: 0px; text-decoration: underline; }
+
+#dnn_ctr979_LogViewer_dlLog td { text-align: left; white-space: normal; border: 1px #fff solid; }
+
+.ControlPanel { overflow: hidden; background: #f5f5f5; }
+
+.ControlPanel .dnnRibbonBar .barContent * { color: #000; }
+
+.ControlPanel .dnnRibbonBar .barContent table { margin: 0 auto; }
+
+/* Default Over-rides */
+#ControlPanelWrapper #dnnCPWrap { filter: none !important; }
+
+/* Modules */
+.DnnModule { margin: 0 0 1em 0; }
+
+/* Panes - In Layout Mode */
+.paneOutline { border: 0; }
+
+.paneOutline span.SubHead center { border: 1px #ccc dotted; border-left: 0; border-right: 0; line-height: 2.5em; }
+
+#iPopUp { display: none; }
+
+.eipbackimg { z-index: 1000; }
+
+/* Content */
+.Social-Links { text-align: right; padding: 5px 0 0 0; }
+
+/* Right Hand Links */
+#RLinks { margin: 0; padding: 0; }
+
+#RLinks a { text-decoration: none; }
+
+#RLinks a img { float: left; padding: 7px 10px 0 0; }
+
+#RLinks li strong { display: block; color: #000; font-weight: bold; text-transform: uppercase; padding: 10px 0 2px 0; font-size: 14px; }
+
+#RLinks li { list-style: none; margin: 0px; padding: 0px; border-bottom: 1px #ccc dashed; height: 75px; }
+
+#RLinks li.last { border-bottom: 0px #ccc solid; }
+
+#RLinks li:hover { background: #eee; }
+
+/* content */
+.featured img { margin-right: 20px; border: 2px #ccc solid; }
+
+.featured a { font-size: 10px; text-decoration: none; }
+
+.featured hr { color: #333; margin: 10px 0; border: 1px #333 dashed; }
+
+.quicklinks a { padding-left: 10px; line-height: 21px; background: url(../images/qlnk.png) left center no-repeat; }
+
+.quicklinks a:hover { background: url(../images/qlnkon.png) left center no-repeat; }
+
+.testimonials img { margin-right: 20px; border: 2px #ccc solid; }
+
+.fback input { color: #666; margin-bottom: 10px; }
+
+.fback a { background: #000; color: #333; padding: 5px 10px; line-height: 30px; text-decoration: none; }
+
+/*links module list style*/
+.linklist { margin: 0px; padding: 0px; }
+
+.linklist li { margin: 0px; padding: 0px; list-style: none; }
+
+.linklist li a { display: block; background: #f5f5f5; color: #333333; text-decoration: none; line-height: 36px; padding-left: 15px; font-weight: bold; margin-bottom: 1px; font-family: Trebuchet MS, Arial, Helvetica, sans-serif; }
+
+.linklist li a:hover { display: block; background: #1c1c1c; color: #fff; }
+
+.servicesbox { margin: 0px; padding: 0px; }
+
+.servicesbox img { padding-bottom: 90px; width: 128px; }
+
+.servicesbox ul { float: left; margin: 0px; padding: 0px; }
+
+.servicesbox ul li a { text-decoration: none; }
+
+.servicesbox ul li { margin: 0px; padding: 0px; background: url(../images/marker.png) left center no-repeat; list-style: none; line-height: 32px; padding-left: 30px; }
+
+.portfoliobox strong { font-size: 18px; line-height: 40px; }
+
+.portfoliobox .space { height: 20px; overflow: hidden; border-bottom: 10px #eee solid; margin-bottom: 20px; }
+
+.portfoliobox .page { padding-top: 20px; clear: both; }
+
+.portfoliobox .page a { display: block; float: left; width: 20px; height: 20px; background: #ccc; margin-right: 4px; text-align: center; line-height: 20px; text-decoration: none; }
+
+.portfoliobox .page a.active { background: #222; color: #fff; }
+
+.ModDNNAnnouncementsC .DNN_ANN_viewtypeSelector { float: none; height: 30px; }
+
+.ModDNNAnnouncementsC div.SubHead { font-size: 16px; font-family: Arial, Helvetica, sans-serif; padding-top: 10px; color: #222; }
+
+.ModDNNAnnouncementsC div.SubHead span { display: block; font-size: 10px; margin-bottom: 5px; color: #999; }
+
+/* ColorBox Core Style The following rules are the styles that are consistant between themes. Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper { position: absolute; top: 0; left: 0; z-index: 9999; overflow: hidden; }
+
+#cboxOverlay { position: fixed; width: 100%; height: 100%; }
+
+#cboxMiddleLeft, #cboxBottomLeft { clear: left; }
+
+#cboxContent { position: relative; overflow: visible; }
+
+#cboxLoadedContent { overflow: auto; }
+
+#cboxLoadedContent iframe { display: block; width: 100%; height: 100%; border: 0; }
+
+#cboxTitle { margin: 0; }
+
+#cboxLoadingOverlay, #cboxLoadingGraphic { position: absolute; top: 0; left: 0; width: 100%; }
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow { cursor: pointer; }
+
+/*  ColorBox example user style The following rules are ordered and tabbed in a way that represents the order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#cboxOverlay { background: #ccc; }
+
+#cboxTopLeft { width: 14px; height: 14px; background: url(images/controls.png) 0 0 no-repeat; }
+
+#cboxTopCenter { height: 14px; background: url(images/border.png) top left repeat-x; }
+
+#cboxTopRight { width: 14px; height: 14px; background: url(images/controls.png) -36px 0 no-repeat; }
+
+#cboxBottomLeft { width: 14px; height: 43px; background: url(images/controls.png) 0 -32px no-repeat; }
+
+#cboxBottomCenter { height: 43px; background: url(images/border.png) bottom left repeat-x; }
+
+#cboxBottomRight { width: 14px; height: 43px; background: url(images/controls.png) -36px -32px no-repeat; }
+
+#cboxMiddleLeft { width: 14px; background: url(images/controls.png) -175px 0 repeat-y; }
+
+#cboxMiddleRight { width: 14px; background: url(images/controls.png) -211px 0 repeat-y; }
+
+#cboxContent { background: #fff; }
+
+#cboxLoadedContent { margin-bottom: 5px; }
+
+#cboxLoadingOverlay { background: url(images/loading_background.png) center center no-repeat; }
+
+#cboxLoadingGraphic { background: url(images/loading.gif) center center no-repeat; }
+
+#cboxTitle { position: absolute; bottom: -25px; left: 0; text-align: center; width: 100%; font-weight: bold; color: #7C7C7C; }
+
+#cboxCurrent { position: absolute; bottom: -25px; left: 58px; font-weight: bold; color: #7C7C7C; }
+
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow { position: absolute; bottom: -29px; background: url(images/controls.png) 0px 0px no-repeat; width: 23px; height: 23px; text-indent: -9999px; }
+
+#cboxPrevious { left: 0px; background-position: -51px -25px; }
+
+#cboxPrevious.hover { background-position: -51px 0px; }
+
+#cboxNext { left: 27px; background-position: -75px -25px; }
+
+#cboxNext.hover { background-position: -75px 0px; }
+
+#cboxClose { right: 0; background-position: -100px -25px; }
+
+#cboxClose.hover { background-position: -100px 0px; }
+
+.cboxSlideshow_on #cboxSlideshow { background-position: -125px 0px; right: 27px; }
+
+.cboxSlideshow_on #cboxSlideshow.hover { background-position: -150px 0px; }
+
+.cboxSlideshow_off #cboxSlideshow { background-position: -150px -25px; right: 27px; }
+
+.cboxSlideshow_off #cboxSlideshow.hover { background-position: -125px 0px; }
+
+.OrderItemDiv { float: left; width: 162px; height: 166px; padding: 0px 0px 0px 0px; margin: 8px 8px 30px 8px; box-shadow: 0px 0px 10px #aaa; background-color: #000; }
+
+.OrderItemDiv .Header { width: 156px; padding: 3px; font-size: 11px; color: #ffb400; background-color: #333; text-align:center; }
+
+.RemainingDaysStyle { font-size: 10px; color: #bbb; }
+
+.XButtonDiv { float: right; }
+
+.XButtonStyle { height: 17px; width: 17px; padding: 0px 2px 0px 2px; margin: -2px -2px 0px 0px; font-weight: bold; font-size: 9px; border: solid 1px white; }
+
+.TemplateImageDiv { float: left; padding: 4px 5px 5px 5px; }
+
+.TemplateImageDiv img { width: 150px; height: 85px; border: none; z-index: 1000;margin-top:2px; }
+.TemplateImageDiv a {text-decoration:none; border:none;}
+.TemplateImageDiv span { font-size: 9px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #aaa; }
+
+.DownloadDiv { height: 40px; text-align:center;}
+.DownloadButtonStyle { margin-top: 4px; background-color: #555;border:none; color: #fff; width:100%; box-shadow: 0 0 5px #000 ; cursor:pointer; }
+.DownloadButtonStyle:hover {background-color:#777;}
+.DownloadButtonStyle:first-child { margin-top: 8px; padding:3px;}
+
+.ShareDiv {height:70px; border:none;background:#444; width:100%;text-align:center;margin-top:10px; box-shadow: 0 0 5px #000 ;}
+
+.ShareDiv #toolsTitle {width:100%;padding:3px 0;background-color:#000;color:#fff;margin-bottom:10px;}
+.ShareDiv a {text-decoration:none !important; border:none !important;display:inline-block;}
+.ShareDiv img { width: 30px; height: 30px; margin-right: 3px; border:none; }
+
+.reportBtn {width:100%;padding:4px 0;background-color:#333 ;color:#fff;margin-top:15px; cursor:pointer; text-align:center;box-shadow: 0 0 5px #000 ;}
+.reportBtn:hover {background-color:#555;}
+.moreOptions {border-top:1px solid #777; width:162px; margin-left:-5px; background-color:#222;font-align:center;color:#fff;text-align:center; padding:5px 0;z-index:100;position:relative; margin-top:23px;cursor:pointer; }
+
+.moreOptions:hover, .moreOptions.hover {background-color:#a40000;color:#fff;}
+
+.moreOptionsDiv {width:142px; height:192px;position:relative;z-index:150;background-color:#222;display:none; margin-left:-6px;color:#fff;padding:10px;box-shadow: 0 5px 10px #555; border:1px solid #000;padding-top:5px;}
+
+.UnrenderedDivs > div { text-align: center; padding: 5px; width: 149px; height: 133px; margin-top:-20px; background-color: #eee; font-size: 10px; color: #000000; position:relative; z-index:100;margin-left:1px;}
+
+.EmptyDataDiv { width: 100%; margin-top: 5px; margin-bottom: 5px; }
+
+.EmptyDataDiv fieldset { padding: 20px; border: 0px; }
+
+.LayoutFieldset { width: auto; border-width: 0px; background-color: transparent; }
+
+.LayoutFieldset table { width: 700px; clear: both; }
+
+.LayoutFieldset table td > div { width: 680px; padding: auto; }
+
+/* ------------------------------------------------------------------------*/
+/* Styles below added by Don and can be removed to return original stying. */
+/* ------------------------------------------------------------------------*/
+.OrderItemDiv { position: relative; box-shadow:0 0 10px #333; border:1px solid #000;}
+
+.XButtonStyle { color: #d40000 !important; position: absolute; top: -5px; right: -5px; border-radius: 12px; background-color: #ccc !important; }
+
+/* ##############     WARNING:    ################### */
+/* Do not edit this file directly. It is created using SCSS and any local changes will be overwritten when the build files change */
+.uniformity * { padding: 0; margin: auto; }
+
+/* * * * * * General Styles * * * * * */
+/* The styles in this section should be considered abstract. They are designed to be used in a wide variety of places on the site, and changing might result in unintended consequences on other pages. To alter the specific look of a given element, target it as specifically as possible (see the footer section in this document for an example of overriding these styles safely. */
+/* .group is the clearfix style. Apply this style to any container whose job is to wrap floated elements and keep them from altering the positioning of elements below them. Read more at: http://css-tricks.com/snippets/css/clear-fix/ */
+.group { *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif"); *zoom: 1; }
+
+.group:before, .group:after { content: "."; display: block; height: 0; overflow: hidden; visibility: hidden; }
+
+.group:after { clear: both; }
+
+/* Grid-based layout (one of the few concessions I make with semantics)  These styles can be applied to an element to give it a width based on a 12. section grid. To get full container width, the numbers should add up to 12. It does NOT describe how many [div]s are contained therein. This also means that "four" and "three" are reversed from what you might think.  For example: If you want three, evenly-spaced [div]s, do the following:  <div class="four"</div> <div class="four"</div> <div class="four"</div>  Two, evenly-spaced would be:  <div class="six"</div> <div class="six"</div>  Because we cannot use "border-box" reliably due to IE 7 and  lower, all widths here must be calculated in percentages. Again, if you want to override widths elsewhere, do it in a safe way for other areas that use these css rules. This rule will most often be combined with .group as its wrapper. */
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven, .twelve { float: left; display: block; position: relative; padding: 12px 1%; margin: auto 1%; }
+
+/* Total widths must take into account margins and paddings above */
+/* Total width: 8.33%  */
+.one { width: 4.33%; }
+
+/* Total width: 16.66% */
+.two { width: 12.66%; }
+
+/* Total width: 25%    */
+.three { width: 21%; }
+
+/* Total width: 33.33% */
+.four { width: 29.33%; }
+
+/* Total width: 41.66% */
+.five { width: 37.66%; }
+
+/* Total width: 50%    */
+.six { width: 46%; }
+
+/* Total width: 58.33% */
+.seven { width: 54.33%; }
+
+/* Total width: 66.66% */
+.eight { width: 62.66%; }
+
+/* Total width: 75%    */
+.nine { width: 71%; }
+
+/* Total width: 83.33% */
+.ten { width: 79.33%; }
+
+/* Total width: 91.66% */
+.eleven { width: 87.66%; }
+
+/* Total width: 100%   */
+.twelve { width: 96%; clear: both; }
+
+/* * * * * * END General Styles * * * * * */
+.button, a.button, a.button:link, .skinwidth a.button { display: inline-block; background-color: #d40000; color: #ffffff; text-decoration: none; text-align: center; padding: 8px; margin: 3px auto; -webkit-border-radius: 3px; border-radius: 3px; background-clip: padding-box; /* stops bg color from leaking outside the border: */ }
+.button:hover, a.button:hover:link, .skinwidth a.button:hover { background-color: red; color: #fff; }
+
+.uniformity { overflow: hidden; color: #111111; }
+.uniformity p { color: #111111; }
+.uniformity a:link, .uniformity a:visited, .uniformity a { color: #771111; }
+.uniformity.content-block { margin: auto; margin-bottom: 20px; width: 982px; padding: 0 20px 20px; }
+.uniformity.content-block > h1:first-child, .uniformity.content-block > h2:first-child { margin-top: 0; margin-left: -20px; margin-right: -20px; background-color: white; }
+.uniformity.content-block > h1:first-child { background-color: #222; color: #eee; }
+.uniformity.content-block.skinwidth { width: 982px; }
+.uniformity img.one, .uniformity img.two, .uniformity img.three, .uniformity img.four, .uniformity img.five, .uniformity img.six, .uniformity img.seven, .uniformity img.eight, .uniformity img.nine, .uniformity img.ten, .uniformity img.eleven, .uniformity img.twelve { padding: 0; margin: 12px 2%; /* 4% added across entire width */ }
+.uniformity h1, .uniformity h2, .uniformity h3 { margin: 0.4em auto; }
+.uniformity h1, .uniformity h2 { text-align: center; padding: 0.4em 0 0.2em; }
+.uniformity h1 { font-size: 32px; }
+.uniformity h2 { font-size: 28px; }
+.uniformity h3 { font-size: 20px; background-color: transparent; }
+.uniformity p { margin-bottom: 1.5em; }
+.uniformity ol, .uniformity ul { margin-left: 1.3em; padding: 0 4em; }
+.uniformity ol.flush-list, .uniformity ul.flush-list { padding: 0; }
+.uniformity img { box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.4); }
+.uniformity.legal, .uniformity.faq { width: 622px; padding-left: 40px; padding-right: 360px; }
+.uniformity.legal h1, .uniformity.legal h2, .uniformity.legal h3, .uniformity.legal h4, .uniformity.faq h1, .uniformity.faq h2, .uniformity.faq h3, .uniformity.faq h4 { text-transform: capitalize; }
+.uniformity.legal > h1:first-child, .uniformity.legal > h2:first-child, .uniformity.faq > h1:first-child, .uniformity.faq > h2:first-child { margin-top: 0; margin-left: -40px; margin-right: -360px; }
+.uniformity.legal .legal-caps, .uniformity.faq .legal-caps { text-transform: uppercase; }
+.uniformity.faq h2, .uniformity.faq h3 { text-align: left; margin-top: 2em; }
+.uniformity.faq h3 { text-transform: none; }
+
+#quick-start { font-size: 1.2em; }
+#quick-start h2 { text-align: center; }
+#quick-start ol { list-style: decimal; padding-left: 1em; }
+#quick-start ol li { font-weight: bold; margin-top: 12px; }
+#quick-start ol li:first-of-type { margin-top: 0; }
+#quick-start .explain { font-size: 0.8em; color: #000; padding-left: 12px; font-weight: normal; }
+#quick-start .button { width: 7em; margin-right: 0.5em; }

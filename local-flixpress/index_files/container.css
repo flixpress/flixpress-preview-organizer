@@ -1,0 +1,5 @@
+h1.cheader{ font-size:24px; border-bottom:2px #aaaaaa solid; padding-bottom:5px; margin-bottom:5px}
+h2.cheader{ font-size:18px; border-bottom:2px #aaaaaa solid; padding-bottom:5px; margin-bottom:5px}
+h3.cheader{ font-size:14px; border-bottom:2px #aaaaaa solid; padding-bottom:5px; margin-bottom:5px}
+div.DnnModule:hover{ border-bottom:0px #fff solid;}
+.c_footer{ text-align:right; clear:both}
