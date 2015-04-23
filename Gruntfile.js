@@ -19,7 +19,12 @@ module.exports = function (grunt) {
     folderOnServer: 'scripts/flixpress-preview-organizer', // No leading or trailing slash
     // Task configuration.
     clean: {
-      files: ['dist']
+      dev: {
+        src: ['.tmp']
+      },
+      dist: {
+        files: ['dist','.tmp']
+      }
     },
     concat: {
       options: {
@@ -70,6 +75,29 @@ module.exports = function (grunt) {
         src: ['test/**/*.js']
       }
     },
+    sass: {
+      options: {
+        sourcemap: 'none'
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'src/sass',
+          src: ['**.{scss,sass}'],
+          dest: 'dist',
+          ext: '.css'
+        }]
+      },
+      dev: {
+        files: [{
+          expand: true,
+          cwd: 'src/sass',
+          src: ['**.{scss,sass}'],
+          dest: '.tmp',
+          ext: '.css'
+        }]
+      }
+    },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
@@ -78,6 +106,10 @@ module.exports = function (grunt) {
       src: {
         files: '<%= jshint.src.src %>',
         tasks: ['jshint:src', /*'qunit'*/]
+      },
+      sass: {
+        files: 'src/**/*.{sass,scss}',
+        tasks: ['sass:dev']
       },
       test: {
         files: '<%= jshint.test.src %>',
@@ -131,7 +163,7 @@ module.exports = function (grunt) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
   });
-  grunt.registerTask('serve', ['connect', 'watch']);
+  grunt.registerTask('serve', ['clean:dev', 'sass:dev', 'connect', 'watch']);
   // I'm not familiar with how testing works
   //grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };
