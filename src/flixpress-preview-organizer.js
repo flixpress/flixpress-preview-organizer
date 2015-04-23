@@ -9,7 +9,7 @@
   $.fn.flixpressPreviewOrganizer = function () {
     return this.each(function () {
       // Do something to each selected element.
-      
+      var $module = $(this);
     });
   };
 }(jQuery));
