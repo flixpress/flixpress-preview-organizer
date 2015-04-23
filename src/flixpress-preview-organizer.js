@@ -24,6 +24,68 @@
       $recentOrders.prepend('<h2>Recent Previews</h2>');
       $pastOrders.prepend('<h2>Past Previews Grouped By Template</h2>');
 
+      // pastItemsByTemplate is an array like the following
+      // [
+      //   {
+      //     name: 83,
+      //     imgSrc: 'path/to/img.jpg',
+      //     elements: [
+      //       DOM_Element,
+      //       DOM_Element,
+      //       DOM_Element
+      //     ]
+      //   },
+      //   {
+      //     name: 78,
+      //     imgSrc: 'path/to/img.jpg',
+      //     elements: [
+      //       DOM_Element
+      //     ]
+      //   }, 
+      //   {
+      //     name: 82,
+      //     imgSrc: 'path/to/img.jpg',
+      //     elements: [
+      //       DOM_Element
+      //     ]
+      //   }  
+      // ]
+      var pastItemsByTemplate = [];
+      
+      // Function to add elemnts into the pastItemsByTemplate array.
+      // Checks if the template is new or old and adds accordingly.
+      var addToTemplatesArray = function(id,imgSrc,element){
+        var is_new = true;
+        $.each(pastItemsByTemplate, function(i, obj){
+          if (obj.name === id){
+            pastItemsByTemplate[i].elements.push(element);
+            is_new = false
+          }
+        });
+        if (!is_new) return;
+        var new_object = {
+          name: id,
+          imgSrc: imgSrc,
+          elements: [element]
+        };
+        pastItemsByTemplate.push(new_object);
+      };
+
+      $.each($pastItems, function(i,obj){
+        var imgSrc = $(obj).find('.TemplateImageDiv img').attr('src');
+        var regex = /([^\/]*).(jpg|png|jpeg)$/i;
+        var templateName = imgSrc.match(regex)[1];
+        addToTemplatesArray(templateName, imgSrc, obj);
+      });
+
+      $.each(pastItemsByTemplate, function(i,obj){
+        $pastOrders.append('<div id="past-orders-group-'+ obj.name +'" class="past-orders-group group-'+ obj.name +'"></div>');
+        $.each(obj.elements, function(i,el){
+          $pastOrders.find('.group-'+ obj.name).append($(el));
+        });
+      });
+
+
       // Get rid of pagination display
       $module.find('.RadDataPager').remove();
     });
