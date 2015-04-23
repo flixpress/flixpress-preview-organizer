@@ -122,7 +122,8 @@ module.exports = function (grunt) {
         },
         files: [
           'local-flixpress/*',
-          'src/*'
+          'src/*',
+          '.tmp/*'
         ]
       }
     },
