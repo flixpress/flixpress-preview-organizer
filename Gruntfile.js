@@ -116,7 +116,10 @@ module.exports = function (grunt) {
           hostname: '*',
           port: 9000,
           livereload: 35728,
-          open: 'http://localhost:9000/local-flixpress/'
+          open: {
+            target: 'http://localhost:9000/local-flixpress/',
+            appName: 'google chrome'
+          }
         }
       }
     }
