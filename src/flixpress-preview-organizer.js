@@ -15,6 +15,15 @@
       var $recentItems = $items.slice(0, numRecentItems);
       var $pastItems = $items.slice(numRecentItems);
 
+      $recentItems.wrapAll( '<div class="recentOrders"></div>' );
+      $pastItems.wrapAll( '<div class="pastOrders"></div>' );
+
+      var $recentOrders = $module.find('.recentOrders');
+      var $pastOrders = $module.find('.pastOrders');
+
+      $recentOrders.prepend('<h2>Recent Previews</h2>');
+      $pastOrders.prepend('<h2>Past Previews by Template</h2>');
+
       // Get rid of pagination display
       $module.find('.RadDataPager').remove();
     });
