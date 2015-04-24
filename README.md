@@ -12,11 +12,30 @@ too far.
 
 ------------
 
+## Testing it out
+
+Now this will only work if there isn't a version of this script already
+running on the page, but you can copy and paste the following into the
+javascript console to take the most current version of the code out for a
+spin.
+
+```javascript
+$('head').append('<link rel="stylesheet" href="https://rawgit.com/flixpress/flixpress-preview-organizer/master/dist/flixpress-preview-organizer.min.css" />');
+$.getScript('https://rawgit.com/flixpress/flixpress-preview-organizer/master/dist/flixpress-preview-organizer.min.js', function(){
+  $('.DnnModule-previews').flixpressPreviewOrganizer();
+});
+
+```
+
 ## Wiring it up
 
 The files in the `dist` folder are all that need to be uploaded to the server.
 Don't ever manually change the contents of this file. If you do, it will
 absolutely get overwritten.
+
+The `dist` folder only gets altered at tagged commits. This will also
+correspond to version changes after `v0.1.0`. It'd be pretty boss to hook this
+up to deploy with webhooks, but manually is fine for now...
 
 Then you'll need to call the main file somewhere on the previews tab. The
 script will call the rest of the necessaries. Just make sure they are all on
