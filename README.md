@@ -15,8 +15,8 @@ too far.
 ## Wiring it up
 
 The files in the `dist` folder are all that need to be uploaded to the server.
-Don't ever manually change the contents of this file. If you don't change the
-code elsewhere, it will absolutely get overwritten.
+Don't ever manually change the contents of this file. If you do, it will
+absolutely get overwritten.
 
 Then you'll need to call the main file somewhere on the previews tab. The
 script will call the rest of the necessaries. Just make sure they are all on
@@ -27,9 +27,13 @@ Something like this should work just fine on the previews page:
 ```javascript
 
 $(document).ready( function(){
+
+  $('head').append('<link rel="stylesheet" href="/scripts/flixpress-preview-organizer/flixpress-preview-organizer.css" />');
+
   $.getScript('/scripts/flixpress-preview-organizer/flixpress-preview-organizer.min.js', function(){
     $('.DnnModule-previews').flixpressPreviewOrganizer();
   });
+
 });
 
 ```
