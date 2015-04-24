@@ -23,7 +23,7 @@ module.exports = function (grunt) {
         src: ['.tmp']
       },
       dist: {
-        files: ['dist','.tmp']
+        src: ['dist','.tmp']
       }
     },
     concat: {
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
       },
       dist: {
         src: ['src/<%= pkg.name %>.js'],
-        dest: 'dist/jquery.<%= pkg.name %>.js'
+        dest: 'dist/<%= pkg.name %>.js'
       }
     },
     uglify: {
@@ -42,7 +42,7 @@ module.exports = function (grunt) {
       },
       dist: {
         src: '<%= concat.dist.dest %>',
-        dest: 'dist/jquery.<%= pkg.name %>.min.js'
+        dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
     qunit: {
@@ -79,15 +79,6 @@ module.exports = function (grunt) {
       options: {
         sourcemap: 'none',
         compass: true
-      },
-      dist: {
-        files: [{
-          expand: true,
-          cwd: 'src/sass',
-          src: ['**.{scss,sass}'],
-          dest: 'dist',
-          ext: '.css'
-        }]
       },
       dev: {
         files: [{
@@ -127,21 +118,42 @@ module.exports = function (grunt) {
         ]
       }
     },
-    copy: {
-      options: {
-        timestamp: true
+    postcss: {
+      dev: {
+        options: {
+          processors: [
+            require('autoprefixer-core')({browsers: '> 0.5%'}).postcss
+          ]
+        },
+        src: '.tmp/*.css'
+      },    
+      dist: {
+        options: {
+          processors: [
+            require('autoprefixer-core')({browsers: '> 0.5%'}).postcss,
+          ],
+        },
+        files: [{
+          expand: true,
+          flatten: true,
+          src: ['.tmp/*.css', '!.tmp/*.min.css'],
+          dest: 'dist/'
+        }]
       },
-      all: {
-        files: [
-          {
-            expand: true,
-            cwd: 'dist/',
-            src: [
-              '*.*' // can be many matching files or patterns
-            ],
-            dest: '<%= pathToServer %>/<%= folderOnServer %>/'
-          }
-        ]
+      distmin: {
+        options: {
+          processors: [
+            require('autoprefixer-core')({browsers: '> 0.5%'}).postcss,
+            require('csswring').postcss
+          ],
+        },
+        files: [{
+          expand: true,
+          flatten: true,
+          src: '.tmp/*.css',
+          dest: 'dist/',
+          ext: '.min.css'
+        }]
       },
     },
     connect: {
@@ -160,12 +172,19 @@ module.exports = function (grunt) {
   });
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'connect', /*'qunit',*/ 'clean', 'concat', 'uglify']);
+  grunt.registerTask('default', ['jshint', 'clean', 'concat', 'uglify', 'css:dist']);
   grunt.registerTask('server', function () {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run(['serve']);
   });
-  grunt.registerTask('serve', ['clean:dev', 'sass:dev', 'connect', 'watch']);
+  grunt.registerTask('serve', ['clean:dev', 'css', 'connect', 'watch']);
+  
+  grunt.registerTask('css', function (target){
+    if (target === 'dist') {
+      return grunt.task.run(['sass', 'postcss:dist', 'postcss:distmin']);
+    }
+    grunt.task.run(['sass:dev', 'postcss:dev']);
+  });
   // I'm not familiar with how testing works
   //grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
 };
