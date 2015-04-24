@@ -60,10 +60,10 @@
         $.each(pastItemsByTemplate, function(i, obj){
           if (obj.name === id){
             pastItemsByTemplate[i].elements.push(element);
-            is_new = false
+            is_new = false;
           }
         });
-        if (!is_new) return;
+        if (!is_new) {return;}
         var new_object = {
           name: id,
           imgSrc: imgSrc,
