@@ -7,6 +7,7 @@
  */
 (function ($) {
   var numRecentItems = 4;
+  var numItemsPerRow = 4;
   $.fn.flixpressPreviewOrganizer = function () {
     return this.each(function () {
       // Do something to each selected element.
@@ -79,12 +80,27 @@
       });
 
       $.each(pastItemsByTemplate, function(i,obj){
-        $pastOrders.append('<div id="past-orders-group-'+ obj.name +'" class="past-orders-group group-'+ obj.name +'"></div>');
+        if (i % numItemsPerRow === 0){
+          $pastOrders.append('<div class="past-orders-group"></div>');
+        }
+        var $lastGroup = $pastOrders.find('.past-orders-group:last');
+        $lastGroup.before('<div id="past-orders-group-'+ obj.name +'" class="template-folder"><div class="OrderItemDiv"></div><div class="OrderItemDiv"><img src="'+ obj.imgSrc +'" /><span>Click to Expand</span></div></div>');
+
+        $lastGroup.append('<div class="past-orders-group-'+ obj.name +'"></div>');
         $.each(obj.elements, function(i,el){
-          $pastOrders.find('.group-'+ obj.name).append($(el));
+          $pastOrders.find('.past-orders-group-'+ obj.name).append($(el));
         });
       });
 
+      $module.on('click', '.template-folder', function(){
+        var id = $(this).attr('id');
+        var animation = {
+          duration: 400,
+          easing: 'swing'
+        };
+        $module.find('.past-orders-group > div').stop().hide(animation);
+        $module.find('.'+id).stop().show(animation);
+      });
 
       // Get rid of pagination display
       $module.find('.RadDataPager').remove();
