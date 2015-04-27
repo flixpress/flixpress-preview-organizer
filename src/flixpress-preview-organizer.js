@@ -104,11 +104,17 @@
         
         $module.find('.past-orders-group > div').not('.arrow-up')
           .stop().hide("blind");
+        
         $module.find('.arrow-up').hide();
-        $module.find('.'+id).stop().show("blind")
-          .closest('.past-orders-group').find('.arrow-up')
-            .stop().show()
-            .css({left: folderPosLeft});
+        $module.find('.'+id).stop().show("blind");
+        
+        var $arrow = $module.find('.'+id).closest('.past-orders-group').find('.arrow-up');
+        
+        if ( $module.find('.template-folder.opened').length > 0 ) {
+          $arrow.stop().show().css({left: folderPosLeft});
+        } else {
+          $arrow.hide();
+        }
       });
 
       // Get rid of pagination display
