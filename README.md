@@ -57,8 +57,8 @@ $(document).ready( function(){
 
 ```
 
-NOTE: jQuery and the data for the preview tab must be loaded before anything
-runs.
+:exclamation: WARNING: jQuery and the data for the preview tab must be loaded before anything
+runs. :exclamation:
 
 ## The 'other' files
 
