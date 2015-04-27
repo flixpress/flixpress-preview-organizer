@@ -99,6 +99,7 @@
         if ($(this).hasClass('opened')){
           $(this).removeClass('opened');
         } else {
+          $module.find('.template-folder.opened').removeClass('opened');
           $(this).addClass('opened');
         }
         
