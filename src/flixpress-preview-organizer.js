@@ -84,7 +84,7 @@
           $pastOrders.append('<div class="past-orders-group"><div class="arrow-up"></div></div>');
         }
         var $lastGroup = $pastOrders.find('.past-orders-group:last');
-        $lastGroup.before('<div id="past-orders-group-'+ obj.name +'" class="template-folder"><div class="OrderItemDiv"></div><div class="OrderItemDiv"><img src="'+ obj.imgSrc +'" /><span>Click to Expand</span></div></div>');
+        $lastGroup.before('<div id="past-orders-group-'+ obj.name +'" class="template-folder"><div class="OrderItemDiv"></div><div class="OrderItemDiv"><img src="'+ obj.imgSrc +'" /><span class="action-message">Click to Expand</span></div></div>');
 
         $lastGroup.append('<div class="past-orders-group-'+ obj.name +'"></div>');
         $.each(obj.elements, function(i,el){
@@ -102,6 +102,9 @@
           $module.find('.template-folder.opened').removeClass('opened');
           $(this).addClass('opened');
         }
+
+        $('.template-folder').find('span.action-message').text('Click to Expand');
+        $('.template-folder.opened').find('span.action-message').text('Click to Close');
         
         $module.find('.past-orders-group > div').not('.arrow-up')
           .stop().hide("blind");
