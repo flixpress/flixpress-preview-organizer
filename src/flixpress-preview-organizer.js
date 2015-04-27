@@ -94,8 +94,9 @@
 
       $module.on('click', '.template-folder', function (e){
         var id = $(this).attr('id');
-        var folderPosLeft = $(e.currentTarget).position().left;
+        var clickedFolderPosLeft = $(e.currentTarget).position().left;
 
+        // Add/Remove `opened` class to .template-folder if clicked
         if ($(this).hasClass('opened')){
           $(this).removeClass('opened');
         } else {
@@ -103,19 +104,26 @@
           $(this).addClass('opened');
         }
 
+        // Change text of .template-folder to be appropriate given state
         $('.template-folder').find('span.action-message').text('Click to Expand');
         $('.template-folder.opened').find('span.action-message').text('Click to Close');
         
+        // hide all order groups (while avoiding the arrow)
         $module.find('.past-orders-group > div').not('.arrow-up')
           .stop().hide("blind");
         
+        // hide all arrows without animation
         $module.find('.arrow-up').hide();
+        
+        // show the open order group with animation
         $module.find('.'+id).stop().show("blind");
         
         var $arrow = $module.find('.'+id).closest('.past-orders-group').find('.arrow-up');
         
+        // show (or hide if all order groups are closed) the arrow
+        // and place it below the appropriate folder
         if ( $module.find('.template-folder.opened').length > 0 ) {
-          $arrow.stop().show().css({left: folderPosLeft});
+          $arrow.stop().show().css({left: clickedFolderPosLeft});
         } else {
           $arrow.hide();
         }
