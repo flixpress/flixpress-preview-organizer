@@ -1,4 +1,4 @@
-/*! flixpress-preview-organizer - v0.1.0 - 2015-04-23
+/*! flixpress-preview-organizer - v0.1.0 - 2015-04-27
 * Copyright (c) 2015 Don Denton; Licensed MIT */
 (function ($) {
   var numRecentItems = 4;
@@ -76,10 +76,10 @@
 
       $.each(pastItemsByTemplate, function(i,obj){
         if (i % numItemsPerRow === 0){
-          $pastOrders.append('<div class="past-orders-group"></div>');
+          $pastOrders.append('<div class="past-orders-group"><div class="arrow-up"></div></div>');
         }
         var $lastGroup = $pastOrders.find('.past-orders-group:last');
-        $lastGroup.before('<div id="past-orders-group-'+ obj.name +'" class="template-folder"><div class="OrderItemDiv"></div><div class="OrderItemDiv"><img src="'+ obj.imgSrc +'" /><span>Click to Expand</span></div></div>');
+        $lastGroup.before('<div id="past-orders-group-'+ obj.name +'" class="template-folder"><div class="OrderItemDiv"></div><div class="OrderItemDiv"><img src="'+ obj.imgSrc +'" /><span class="action-message">Click to Expand</span></div></div>');
 
         $lastGroup.append('<div class="past-orders-group-'+ obj.name +'"></div>');
         $.each(obj.elements, function(i,el){
@@ -87,14 +87,41 @@
         });
       });
 
-      $module.on('click', '.template-folder', function(){
+      $module.on('click', '.template-folder', function (e){
         var id = $(this).attr('id');
-        var animation = {
-          duration: 400,
-          easing: 'swing'
-        };
-        $module.find('.past-orders-group > div').stop().hide(animation);
-        $module.find('.'+id).stop().show(animation);
+        var clickedFolderPosLeft = $(e.currentTarget).position().left;
+
+        // Add/Remove `opened` class to .template-folder if clicked
+        if ($(this).hasClass('opened')){
+          $(this).removeClass('opened');
+        } else {
+          $module.find('.template-folder.opened').removeClass('opened');
+          $(this).addClass('opened');
+        }
+
+        // Change text of .template-folder to be appropriate given state
+        $('.template-folder').find('span.action-message').text('Click to Expand');
+        $('.template-folder.opened').find('span.action-message').text('Click to Close');
+        
+        // hide all order groups (while avoiding the arrow)
+        $module.find('.past-orders-group > div').not('.arrow-up')
+          .stop().hide("blind");
+        
+        // hide all arrows without animation
+        $module.find('.arrow-up').hide();
+        
+        // show the open order group with animation
+        $module.find('.'+id).stop().show("blind");
+        
+        var $arrow = $module.find('.'+id).closest('.past-orders-group').find('.arrow-up');
+        
+        // show (or hide if all order groups are closed) the arrow
+        // and place it below the appropriate folder
+        if ( $module.find('.template-folder.opened').length > 0 ) {
+          $arrow.stop().show().css({left: clickedFolderPosLeft});
+        } else {
+          $arrow.hide();
+        }
       });
 
       // Get rid of pagination display
