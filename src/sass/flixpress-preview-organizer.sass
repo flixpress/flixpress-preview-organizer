@@ -11,12 +11,24 @@
 
 .past-orders-group
   @extend %order-groups
+  background: grey
   clear: both
+  position: relative
 
   & > div
     +pie-clearfix
-    background: grey
     display: none
+
+$triangle-size: 20px
+.arrow-up 
+  width: 0
+  height: 0
+  border-left: $triangle-size solid transparent
+  border-right: $triangle-size solid transparent
+  border-bottom: $triangle-size solid grey
+  position: absolute
+  top: -#{$triangle-size}
+
 
 .template-folder
   +pie-clearfix

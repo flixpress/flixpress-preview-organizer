@@ -81,7 +81,7 @@
 
       $.each(pastItemsByTemplate, function(i,obj){
         if (i % numItemsPerRow === 0){
-          $pastOrders.append('<div class="past-orders-group"></div>');
+          $pastOrders.append('<div class="past-orders-group"><div class="arrow-up"></div></div>');
         }
         var $lastGroup = $pastOrders.find('.past-orders-group:last');
         $lastGroup.before('<div id="past-orders-group-'+ obj.name +'" class="template-folder"><div class="OrderItemDiv"></div><div class="OrderItemDiv"><img src="'+ obj.imgSrc +'" /><span>Click to Expand</span></div></div>');
@@ -92,14 +92,16 @@
         });
       });
 
-      $module.on('click', '.template-folder', function(){
+      $module.on('click', '.template-folder', function (e){
         var id = $(this).attr('id');
-        var animation = {
-          duration: 400,
-          easing: 'swing'
-        };
-        $module.find('.past-orders-group > div').stop().hide(animation);
-        $module.find('.'+id).stop().show(animation);
+        var folderPosLeft = $(e.currentTarget).position().left;
+        $module.find('.past-orders-group > div').not('.arrow-up')
+          .stop().hide("blind");
+        $module.find('.arrow-up').hide();
+        $module.find('.'+id).stop().show("blind")
+          .closest('.past-orders-group').find('.arrow-up')
+            .stop().show()
+            .css({left: folderPosLeft});
       });
 
       // Get rid of pagination display
