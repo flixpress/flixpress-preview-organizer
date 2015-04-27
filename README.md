@@ -78,6 +78,10 @@ MIT © Don Denton
 
 ## Releases
 
+### v1.0
+
+Prettied everything up for production
+
 ### v0.1.0
 
 Initial commit.
