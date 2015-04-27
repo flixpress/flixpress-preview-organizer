@@ -95,6 +95,13 @@
       $module.on('click', '.template-folder', function (e){
         var id = $(this).attr('id');
         var folderPosLeft = $(e.currentTarget).position().left;
+
+        if ($(this).hasClass('opened')){
+          $(this).removeClass('opened');
+        } else {
+          $(this).addClass('opened');
+        }
+        
         $module.find('.past-orders-group > div').not('.arrow-up')
           .stop().hide("blind");
         $module.find('.arrow-up').hide();
